@@ -33,7 +33,7 @@ with open("syslog.log") as lf:
     u_d[info[2]][0] += 1
 
  e_d = sorted(e_d.items(), key=operator.itemgetter(1), reverse=True)
- u_d = sorted(u_d.items(), key=operator.itemgetter(0)) #[0:8] choose this if first eight elements are only necessary 
+ u_d = sorted(u_d.items(), key=operator.itemgetter(0))[0:8] #remove [0:8] to choose all rows, instead of first eight rows 
 
 
  e_header = ["Error","Count"]
